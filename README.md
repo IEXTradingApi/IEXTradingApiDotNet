@@ -45,40 +45,40 @@ namespace IEXTradingDotNetCore
             }
             else
             {
-                Console.WriteLine(data.Symbol);
-                Console.WriteLine(data.CompanyName);
-                Console.WriteLine(data.PrimaryExchange);
-                Console.WriteLine(data.Sector);
-                Console.WriteLine(data.CalculationPrice);
-                Console.WriteLine(data.Open);
-                Console.WriteLine(data.OpenTime);
-                Console.WriteLine(data.Close);
-                Console.WriteLine(data.CloseTime);
-                Console.WriteLine(data.LatestPrice);
-                Console.WriteLine(data.LatestSource);
-                Console.WriteLine(data.LatestTime);
-                Console.WriteLine(data.LatestUpdate);
-                Console.WriteLine(data.LatestVolume);
-                Console.WriteLine(data.IEXRealtimePrice);
-                Console.WriteLine(data.IEXRealtimeSize);
-                Console.WriteLine(data.IEXLastUpdated);
-                Console.WriteLine(data.DelayedPrice);
-                Console.WriteLine(data.DelayedPriceTime);
-                Console.WriteLine(data.PreviousClose);
-                Console.WriteLine(data.Change);
-                Console.WriteLine(data.ChangePercent);
-                Console.WriteLine(data.IEXMarketPercent);
-                Console.WriteLine(data.IEXVolume);
-                Console.WriteLine(data.AvgTotalVolume);
-                Console.WriteLine(data.IEXBidPrice);
-                Console.WriteLine(data.IEXBidSize);
-                Console.WriteLine(data.IEXAskPrice);
-                Console.WriteLine(data.IEXAskSize);
-                Console.WriteLine(data.MarketCap);
-                Console.WriteLine(data.PeRatio);
-                Console.WriteLine(data.Week52High);
-                Console.WriteLine(data.Week52Low);
-                Console.WriteLine(data.YtdChange);
+                Console.WriteLine("Symbol: " + data.Symbol);
+                Console.WriteLine("CompanyName: " + data.CompanyName);
+                Console.WriteLine("PrimaryExchange: " + data.PrimaryExchange);
+                Console.WriteLine("Sector: " + data.Sector);
+                Console.WriteLine("CalculationPrice: " + data.CalculationPrice);
+                Console.WriteLine("Open: " + data.Open);
+                Console.WriteLine("OpenTime: " + data.OpenTime);
+                Console.WriteLine("Close: " + data.Close);
+                Console.WriteLine("CloseTime: " + data.CloseTime);
+                Console.WriteLine("LatestPrice: " + data.LatestPrice);
+                Console.WriteLine("LatestSource: " + data.LatestSource);
+                Console.WriteLine("LatestTime: " + data.LatestTime);
+                Console.WriteLine("LatestUpdate: " + data.LatestUpdate);
+                Console.WriteLine("LatestVolume: " + data.LatestVolume);
+                Console.WriteLine("IEXRealtimePrice: " + data.IEXRealtimePrice);
+                Console.WriteLine("IEXRealtimeSize: " + data.IEXRealtimeSize);
+                Console.WriteLine("IEXLastUpdated: " + data.IEXLastUpdated);
+                Console.WriteLine("DelayedPrice: " + data.DelayedPrice);
+                Console.WriteLine("DelayedPriceTime: " + data.DelayedPriceTime);
+                Console.WriteLine("PreviousClose: " + data.PreviousClose);
+                Console.WriteLine("Change: " + data.Change);
+                Console.WriteLine("ChangePercent: " + data.ChangePercent);
+                Console.WriteLine("IEXMarketPercent: " + data.IEXMarketPercent);
+                Console.WriteLine("IEXVolume: " + data.IEXVolume);
+                Console.WriteLine("AvgTotalVolume: " + data.AvgTotalVolume);
+                Console.WriteLine("IEXBidPrice: " + data.IEXBidPrice);
+                Console.WriteLine("IEXBidSize: " + data.IEXBidSize);
+                Console.WriteLine("IEXAskPrice: " + data.IEXAskPrice);
+                Console.WriteLine("IEXAskSize: " + data.IEXAskSize);
+                Console.WriteLine("MarketCap: " + data.MarketCap);
+                Console.WriteLine("PeRatio: " + data.PeRatio);
+                Console.WriteLine("Week52High: " + data.Week52High);
+                Console.WriteLine("Week52Low: " + data.Week52Low);
+                Console.WriteLine("YtdChange: " + data.YtdChange);
             }
         }
     }
