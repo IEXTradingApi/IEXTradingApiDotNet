@@ -31,7 +31,8 @@ namespace IEXTradingDotNetCore
         {
             var connection = IEXTradingConnection.Instance;
             var stockQuoteOperation = connection.GetQueryObject_STOCK_QUOTE();
-            stockQuoteOperation.FilterBy(Const_STOCK_QUOTE.STOCK_QUOTE_fields.CloseTime, Const_STOCK_QUOTE.STOCK_QUOTE_fields.DelayedPriceTime);
+            stockQuoteOperation.FilterBy(Const_STOCK_QUOTE.STOCK_QUOTE_fields.CloseTime,
+                Const_STOCK_QUOTE.STOCK_QUOTE_fields.DelayedPriceTime);
             var responseStockQuoteOperation = stockQuoteOperation.Query("MSFT");
 
             // Printout the results
