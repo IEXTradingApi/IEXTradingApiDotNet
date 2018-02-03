@@ -11,6 +11,7 @@ The IEX Trading operations that are currently covered by this wrapper are:
 2. Chart
 3. Open-Close
 4. Previous
+4. Company
 
 <a name="quote"></a>
 ## QUOTE
