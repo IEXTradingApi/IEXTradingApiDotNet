@@ -8,7 +8,7 @@ The IEX Trading operations that are currently covered by this wrapper are:
 
 ### Stock
 1. [Quote](#quote)
-2. Chart
+2. [Chart](#chart)
 3. Open-Close
 4. Previous
 5. Company
@@ -89,4 +89,175 @@ namespace IEXTradingDotNetCore
     }
 }
 
+```
+
+<a name="chart"></a>
+## CHART
+
+***
+## Display the result of a CHART date/yyyymmdd request
+```
+
+using IEXTrading;
+using System;
+
+namespace IEXTradingDotNetCore
+{
+    public class Program
+    {
+        public static void Main(string[] args)
+        {
+            var connection = IEXTradingConnection.Instance;
+            var operation = connection.GetQueryObject_STOCK_CHART();
+            var response = operation.Query("MSFT", DateTime.Today.AddDays(-1));
+
+            // Printout the results
+            Console.WriteLine("******** RAW DATA QUOTE ********");
+            Console.WriteLine(response.RawData);
+
+            Console.WriteLine("******** STRUCTURED DATA QUOTE ********");
+            var data = response.Data;
+            if (data.Error)
+            {
+                Console.WriteLine(data.ErrorMessage);
+            }
+            else
+            {
+                Console.WriteLine("Range: " + data.Range);
+                foreach(var t in data.TimeSeries)
+                {
+                    Console.WriteLine("Average: " + t.Average);
+                    Console.WriteLine("Change: " + t.Change);
+                    Console.WriteLine("Change Over Time: " + t.ChangeOverTime);
+                    Console.WriteLine("Change Percent: " + t.ChangePercent);
+                    Console.WriteLine("Close: " + t.Close);
+                    Console.WriteLine("Date: " + t.Date);
+                    Console.WriteLine("High: " + t.High);
+                    Console.WriteLine("Label: " + t.Label);
+                    Console.WriteLine("Low: " + t.Low);
+                    Console.WriteLine("Minute: " + t.Minute);
+                    Console.WriteLine("Notional: " + t.Notional);
+                    Console.WriteLine("Number of Trades: " + t.NumberOfTrades);
+                    Console.WriteLine("Open: " + t.Open);
+                    Console.WriteLine("Unadjusted Volume: " + t.UnadjustedVolume);
+                    Console.WriteLine("Volume: " + t.Volume);
+                    Console.WriteLine("Vwap: " + t.Vwap);
+                    Console.WriteLine("===============");
+                }
+            }
+        }
+    }
+}
+```
+
+***
+## Display the result of a CHART 1d request
+```
+
+using IEXTrading;
+using System;
+
+namespace IEXTradingDotNetCore
+{
+    public class Program
+    {
+        public static void Main(string[] args)
+        {
+            var connection = IEXTradingConnection.Instance;
+            var operation = connection.GetQueryObject_STOCK_CHART();
+            var response = operation.Query("MSFT", STOCK_CHART.Const_STOCK_CHART.STOCK_CHART_input_options_fields.OneDay);
+
+            // Printout the results
+            Console.WriteLine("******** RAW DATA QUOTE ********");
+            Console.WriteLine(response.RawData);
+
+            Console.WriteLine("******** STRUCTURED DATA QUOTE ********");
+            var data = response.Data;
+            if (data.Error)
+            {
+                Console.WriteLine(data.ErrorMessage);
+            }
+            else
+            {
+                Console.WriteLine("Range: " + data.Range);
+                foreach(var t in data.TimeSeries)
+                {
+                    Console.WriteLine("Average: " + t.Average);
+                    Console.WriteLine("Change: " + t.Change);
+                    Console.WriteLine("Change Over Time: " + t.ChangeOverTime);
+                    Console.WriteLine("Change Percent: " + t.ChangePercent);
+                    Console.WriteLine("Close: " + t.Close);
+                    Console.WriteLine("Date: " + t.Date);
+                    Console.WriteLine("High: " + t.High);
+                    Console.WriteLine("Label: " + t.Label);
+                    Console.WriteLine("Low: " + t.Low);
+                    Console.WriteLine("Minute: " + t.Minute);
+                    Console.WriteLine("Notional: " + t.Notional);
+                    Console.WriteLine("Number of Trades: " + t.NumberOfTrades);
+                    Console.WriteLine("Open: " + t.Open);
+                    Console.WriteLine("Unadjusted Volume: " + t.UnadjustedVolume);
+                    Console.WriteLine("Volume: " + t.Volume);
+                    Console.WriteLine("Vwap: " + t.Vwap);
+                    Console.WriteLine("===============");
+                }
+            }
+        }
+    }
+}
+```
+
+***
+## Display the result of a CHART dynamic request
+```
+
+using IEXTrading;
+using System;
+
+namespace IEXTradingDotNetCore
+{
+    public class Program
+    {
+        public static void Main(string[] args)
+        {
+            var connection = IEXTradingConnection.Instance;
+            var operation = connection.GetQueryObject_STOCK_CHART();
+            var response = operation.Query("MSFT", STOCK_CHART.Const_STOCK_CHART.STOCK_CHART_input_options_fields.Dynamic);
+
+            // Printout the results
+            Console.WriteLine("******** RAW DATA QUOTE ********");
+            Console.WriteLine(response.RawData);
+
+            Console.WriteLine("******** STRUCTURED DATA QUOTE ********");
+            var data = response.Data;
+            if (data.Error)
+            {
+                Console.WriteLine(data.ErrorMessage);
+            }
+            else
+            {
+                Console.WriteLine("Range: " + data.Range);
+                foreach(var t in data.TimeSeries)
+                {
+                    Console.WriteLine("Average: " + t.Average);
+                    Console.WriteLine("Change: " + t.Change);
+                    Console.WriteLine("Change Over Time: " + t.ChangeOverTime);
+                    Console.WriteLine("Change Percent: " + t.ChangePercent);
+                    Console.WriteLine("Close: " + t.Close);
+                    Console.WriteLine("Date: " + t.Date);
+                    Console.WriteLine("High: " + t.High);
+                    Console.WriteLine("Label: " + t.Label);
+                    Console.WriteLine("Low: " + t.Low);
+                    Console.WriteLine("Minute: " + t.Minute);
+                    Console.WriteLine("Notional: " + t.Notional);
+                    Console.WriteLine("Number of Trades: " + t.NumberOfTrades);
+                    Console.WriteLine("Open: " + t.Open);
+                    Console.WriteLine("Unadjusted Volume: " + t.UnadjustedVolume);
+                    Console.WriteLine("Volume: " + t.Volume);
+                    Console.WriteLine("Vwap: " + t.Vwap);
+                    Console.WriteLine("===============");
+                }
+            }
+        }
+    }
+}
 ```
